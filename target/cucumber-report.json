@@ -1,0 +1,117 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "To Get the latest covid details from the open source api",
+        "description": "",
+        "id": "to-validate-the-covid-information-from-api;to-get-the-latest-covid-details-from-the-open-source-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6172336000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user configured the api with details from the properties file \"api-covid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"api-covid\"",
+                  "offset": 62
+                }
+              ],
+              "location": "StepDefinitions.user_configured_the_api_with_details_from_the_properties_file(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8224248100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user get the latest covid information from endpoint \"/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect\u003dtrue\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect\u003dtrue\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.user_get_the_latest_covid_information_from_endpoint(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12695200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "validate the response with following fields displayed",
+            "match": {
+              "location": "StepDefinitions.validate_the_response_with_following_fields_displayed(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "activeCases"
+                ]
+              },
+              {
+                "cells": [
+                  "activeCasesNew"
+                ]
+              },
+              {
+                "cells": [
+                  "recovered"
+                ]
+              },
+              {
+                "cells": [
+                  "recoveredNew"
+                ]
+              },
+              {
+                "cells": [
+                  "totalCases"
+                ]
+              },
+              {
+                "cells": [
+                  "lastUpdatedAtApify"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Covid"
+          }
+        ]
+      }
+    ],
+    "name": "To Validate the Covid Information from API",
+    "description": "",
+    "id": "to-validate-the-covid-information-from-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/FeatureFiles/SampleAPI.feature",
+    "tags": [
+      {
+        "name": "@Covid",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
