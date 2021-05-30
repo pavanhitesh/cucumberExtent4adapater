@@ -1,5 +1,5 @@
 
-@SendMail
+@SendMail @Regression
 Feature: To Send Confirmation mail to user in gmail
 
 Scenario Outline: To Send mail to user "<mailId>"
@@ -10,4 +10,4 @@ Then user send the message
 
   Examples:
   |mailId|message|
-  |pavanfunny@gmail.com|Sample Message 1|
+  |pavanfunny@gmail.com|Sample Message Parallel|

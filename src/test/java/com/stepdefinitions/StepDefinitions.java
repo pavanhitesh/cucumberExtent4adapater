@@ -6,10 +6,12 @@ import com.cucumber.adapter.ExtentCucumberAdapter;
 import com.cucumber.adapter.ExtentReport;
 import com.generalactions.APIActions;
 import com.generalactions.SendMail;
+import com.pageobjects.SeleniumDevPageObjects;
 import com.utilites.DriverFactory;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.testng.Assert;
 
 
 import javax.mail.Message;
@@ -22,6 +24,9 @@ public class StepDefinitions {
     Message message;
     Map<String,Object> responseMap;
     APIActions apiActions;
+
+    SeleniumDevPageObjects seleniumDevPageObjects = new SeleniumDevPageObjects();
+
 
     @Given("user configure the gmail configuration to send mail")
     public void user_configure_the_gmail_configuration_to_send_mail() {
@@ -69,6 +74,33 @@ public class StepDefinitions {
         ExtentReport.addMapAsTable(data,"Please find the results");
         System.out.println(responseMap);
 
+    }
+
+    @Given("User navigate to url {string}")
+    public void user_navigate_to_url(String url) {
+        DriverFactory.getWebDriver().get(url);
+    }
+
+    @When("User navigate to projects")
+    public void user_navigate_to_projects() {
+       seleniumDevPageObjects.clickProjects();
+    }
+
+    @When("User navigate to documents")
+    public void user_navigate_to_documents() {
+       seleniumDevPageObjects.clickDocumentations();
+    }
+
+    @Then("user sucessfully navigated to projects")
+    public void user_sucessfully_navigated_to_projects() {
+        String title = DriverFactory.getWebDriver().getTitle();
+       Assert.assertEquals(title,"Selenium Projects");
+    }
+
+    @Then("user sucessfully navigated to documents")
+    public void user_sucessfully_navigated_to_documents() {
+        String title = DriverFactory.getWebDriver().getTitle();
+       Assert.assertEquals(title,"The Selenium Browser Automation Project :: Documentation for Selenium");
     }
 
 }

@@ -1,4 +1,4 @@
-@Covid
+@Covid @Regression
 Feature: To Validate the Covid Information from API
 
   Scenario: To Get the latest covid details from the open source api

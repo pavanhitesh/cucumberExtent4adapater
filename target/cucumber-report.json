@@ -4,108 +4,148 @@
     "elements": [
       {
         "line": 4,
-        "name": "To Get the latest covid details from the open source api",
+        "name": "To open selenium dev application and navigate to projects",
         "description": "",
-        "id": "to-validate-the-covid-information-from-api;to-get-the-latest-covid-details-from-the-open-source-api",
+        "id": "sample-test-case-to-open-selenium-dev-application;to-open-selenium-dev-application-and-navigate-to-projects",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6172336000,
+              "duration": 35974811200,
               "status": "passed"
             },
             "line": 5,
-            "name": "user configured the api with details from the properties file \"api-covid\"",
+            "name": "User navigate to url \"https://www.selenium.dev/\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"api-covid\"",
-                  "offset": 62
+                  "val": "\"https://www.selenium.dev/\"",
+                  "offset": 21
                 }
               ],
-              "location": "StepDefinitions.user_configured_the_api_with_details_from_the_properties_file(String)"
+              "location": "StepDefinitions.user_navigate_to_url(String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 8224248100,
+              "duration": 2329797500,
               "status": "passed"
             },
             "line": 6,
-            "name": "user get the latest covid information from endpoint \"/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect\u003dtrue\"",
+            "name": "User navigate to projects",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect\u003dtrue\"",
-                  "offset": 52
-                }
-              ],
-              "location": "StepDefinitions.user_get_the_latest_covid_information_from_endpoint(String)"
+              "location": "StepDefinitions.user_navigate_to_projects()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 12695200,
+              "duration": 40249300,
               "status": "passed"
             },
             "line": 7,
-            "name": "validate the response with following fields displayed",
+            "name": "user sucessfully navigated to projects",
             "match": {
-              "location": "StepDefinitions.validate_the_response_with_following_fields_displayed(String\u003e)"
+              "location": "StepDefinitions.user_sucessfully_navigated_to_projects()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "activeCases"
-                ]
-              },
-              {
-                "cells": [
-                  "activeCasesNew"
-                ]
-              },
-              {
-                "cells": [
-                  "recovered"
-                ]
-              },
-              {
-                "cells": [
-                  "recoveredNew"
-                ]
-              },
-              {
-                "cells": [
-                  "totalCases"
-                ]
-              },
-              {
-                "cells": [
-                  "lastUpdatedAtApify"
-                ]
-              }
-            ],
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Covid"
+            "name": "@Chrome"
           }
         ]
       }
     ],
-    "name": "To Validate the Covid Information from API",
+    "name": "Sample test case to open selenium dev application",
     "description": "",
-    "id": "to-validate-the-covid-information-from-api",
+    "id": "sample-test-case-to-open-selenium-dev-application",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/FeatureFiles/SampleAPI.feature",
+    "uri": "file:src/test/resources/FeatureFiles/SampleChrome.feature",
     "tags": [
       {
-        "name": "@Covid",
+        "name": "@Chrome",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "To open selenium dev application and navigate to documents",
+        "description": "",
+        "id": "sample-test-case-to-open-selenium-dev-application-in-new-parallel-browser;to-open-selenium-dev-application-and-navigate-to-documents",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36633696500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigate to url \"https://www.selenium.dev/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.selenium.dev/\"",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefinitions.user_navigate_to_url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome\u003d90.0.4430.212)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-DHADBG8\u0027, ip: \u0027192.168.31.228\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.5\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\\Users\\repak\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2e756b80b2501dbda5095dabe154afa1\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy17.click(Unknown Source)\r\n\tat com.pageobjects.SeleniumDevPageObjects.clickDocumentations(SeleniumDevPageObjects.java:23)\r\n\tat com.stepdefinitions.StepDefinitions.user_navigate_to_documents(StepDefinitions.java:91)\r\n\tat ✽.User navigate to documents(file:src/test/resources/FeatureFiles/SampleChromeNew.feature:6)\r\n",
+              "duration": 1900143100,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "User navigate to documents",
+            "match": {
+              "location": "StepDefinitions.user_navigate_to_documents()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 316300,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user sucessfully navigated to documents",
+            "match": {
+              "location": "StepDefinitions.user_sucessfully_navigated_to_documents()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Chrome1"
+          }
+        ]
+      }
+    ],
+    "name": "Sample test case to open selenium dev application in new parallel browser",
+    "description": "",
+    "id": "sample-test-case-to-open-selenium-dev-application-in-new-parallel-browser",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/FeatureFiles/SampleChromeNew.feature",
+    "tags": [
+      {
+        "name": "@Chrome1",
         "type": "Tag",
         "location": {
           "line": 1,

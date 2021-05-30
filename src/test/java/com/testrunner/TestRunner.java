@@ -4,6 +4,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import cucumber.api.testng.TestNGCucumberRunner;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +15,7 @@ import java.util.Date;
         glue = {"com.stepdefinitions"},
         plugin = {"json:target/cucumber-report.json","com.cucumber.adapter.ExtentCucumberAdapter:"},
         dryRun = false,
-        tags = {"@Covid"},
+        tags = {"@Chrome,@Chrome1"},
         strict = true)
 
 public class TestRunner extends AbstractTestNGCucumberTests {
@@ -27,11 +28,17 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         System.setProperty("extent.reporter.spark.out",String.format("extentReport/%s.html",dateStringFormat));
     }
 
-    @BeforeClass
-    public void startTest(){
-        TestNGCucumberRunner testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-        testNGCucumberRunner.provideScenarios();
+//    @BeforeClass
+//    public void startTest(){
+//        TestNGCucumberRunner testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+//        testNGCucumberRunner.provideScenarios();
+//
+//    }
 
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
     }
 
 }
